@@ -1,4 +1,547 @@
 <!DOCTYPE html>
 <html>
-    <body>geni graf</body>
+
+<head>
+    <title>
+        Geni graf
+    </title>
+</head>
+
+<body>
+    <h1>Geni graf</h1>
+    <a href="#download">Download</a>
+    <br>
+    <a href="#Upute">Upute za korištenje programa</a>
+    <br>
+    <a href="#feedback">Feedback</a>
+    <br>
+    <hr>
+    <h2 id="download">Download</h2>
+    <a href="Geni_graf\Geni_graf-v1.1.zip" download="Geni_graf_v1.1">
+        <h3>Geni graf v1.1</h3>
+    </a>
+
+    <hr>
+    <h2 id="Upute"> Upute za korištenje programa</h2>
+
+    <p class=MsoNormal>Prije pokretanja programa je potrebno imati „slike“ i
+        „files“ folder. „files“ treba sadržavati „Bornaj.cm“ i „OpenSans-Regular.ttf“
+        datoteke.</p>
+
+    <p class=MsoNormal> Nakon pokretanja programa se u console-i traži upis svih
+        parametara prije pokazivanja grafa. Upisuju se podaci u tablici. Dana su i
+        ograničenja unosa podataka. </p>
+
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Unos</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border:solid windowtext 1.0pt;
+            border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Opis</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border:solid windowtext 1.0pt;
+            border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ograničenja</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border:solid windowtext 1.0pt;
+            border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Napomena</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ime x osi</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Tekst ispod x
+                    osi</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>/</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ime y osi</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Tekst lijevo
+                    od y osi</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>/</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Pozicija
+                    legende</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Odabir
+                    lokacije na kojoj se nalazi legenda. Može biti ispod ili desno od grafa.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis mora
+                    biti „0“ ili „1“.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Veličina x
+                    osi</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis najveće
+                    vrijednosti na x osi.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis mora
+                    biti prirodan broj djeljiv s 1000.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Logaritamska
+                    skala</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Odabir je li
+                    skala na y osi logaritamska ili linearna.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis mora
+                    biti „y“ (yes) ili „n“ (no).</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Broj serija</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis koliko
+                    serija se crta na grafu. Svaka serija se nalazi u zasebnoj datoteci.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisan prirodan broj.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Podjela x osi</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Odabir koliki
+                    dio x osi će se prikazati na ekranu.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisano „0“, „1“ ili „2“.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Pomak po x
+                    osi</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis za koliko
+                    je x os i podaci pomaknuti u lijevo.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisana 0 ili prirodan broj manji od odabrane podjele x osi.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ova opcija ne
+                    postoji ako je odabran prikaz cijele x osi.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Lokacija
+                    filea</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Upis adrese
+                    filea s podacima serije.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisana validna adresa.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ako se file
+                    nalazi u istom folderu kao i program se može napisati samo ime i ekstenziju filea,
+                    a ako nije je potrebno napisati punu adresu filea.</p>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Svi unosi
+                    nakon ovog (i ovaj) se ponavljaju ovisno o upisanom broju serija.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>ID boje</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Odabir boje
+                    ove serije.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisan jedan od ponuđenih brojeve ili „l“ za listu ponuđenih boja.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ime serije</p>
+            </td>
+            <td width=196 valign=top style='width:146.75pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Odabir ime
+                    serije.</p>
+            </td>
+            <td width=161 valign=top style='width:121.05pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Mora biti
+                    upisan barem 1 znak.</p>
+            </td>
+            <td width=134 valign=top style='width:100.7pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class=MsoNormal>Kada su upisani svi parametri se otvara drugi window s
+        grafom. Sve poruke korisniku ili greške se još uvijek ispisuju u consoleu. Sada
+        određene tipke imaju svoje funkcije.</p>
+
+    <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Tipka</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border:solid windowtext 1.0pt;
+            border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Funkcija</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border:solid windowtext 1.0pt;
+            border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Napomena</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Strelica
+                    lijevo</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Prikazuje dio
+                    grafa prije trenutno prikazanog.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ako je
+                    odabran prikaz cijele x osi nema funkciju.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Strelica
+                    desno</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Prikazuje dio
+                    grafa nakon trenutno prikazanog.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ako je
+                    odabran prikaz cijele x osi nema funkciju.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Strelica gore</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Pomiče cijeli
+                    graf i legendu dolje.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Strelica
+                    dolje</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Pomiče cijeli
+                    graf i legendu gore.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>R</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Resetira
+                    pogled na graf.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Escape</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Gasi program.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>P</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Sprema sliku
+                    grafa u slike folder.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ime slike je
+                    datum i vrijeme slikanja slike.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>F3</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ispisuje neke
+                    podatke o trenutno prikazanom grafu.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Služi za
+                    traženje grešaka u programu.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>F11</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Pali/gasi
+                    fullscreen mode.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Fullscreen
+                    nema nikakvog efekta na prikaz grafa.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Scrollanje
+                    gore</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>„Zoomira“ na
+                    graf.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ako je
+                    odabran prikaz cijele x osi nema funkciju.</p>
+            </td>
+        </tr>
+        <tr>
+            <td width=113 valign=top style='width:84.8pt;border:solid windowtext 1.0pt;
+            border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Scrollanje
+                    dolje</p>
+            </td>
+            <td width=302 valign=top style='width:226.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>„odzoomira“
+                    iz grafa.</p>
+            </td>
+            <td width=208 valign=top style='width:155.85pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            padding:0cm 5.4pt 0cm 5.4pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>Ako je odabran
+                    prikaz cijele x osi nema funkciju.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class=MsoNormal>Ukoliko se na grafu nalaze 2 ili više stupaca s jednakim x i
+        y vrijednostima će se iznad njih pokazati * i u console-i će se ispisati koliko
+        ih se nalazi tamo.</p>
+
+    <hr>
+    <h2 id="feedback">Feedback</h2>
+    <a href="https://forms.gle/VVT1wCfzqxe4EsMr7">Prijavite greške u programu</a>
+    <br>
+    <a href="https://forms.gle/TzRunaXt1Zyf6xwP6">Predložite poboljšanja ili nove funkcije programa</a>
+</body>
+
 </html>
