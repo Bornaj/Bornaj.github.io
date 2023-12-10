@@ -5,6 +5,9 @@ var neponavljaju = false;
 var znamenke = 0;
 var prost = 0;
 var ntikorijen = 0;
+var z1 = 0;
+var z2 = 0;
+var skupZnamenki = [];
 
 function izracun() {
     document.getElementById("racuna").style.backgroundColor = "Red";
@@ -65,6 +68,24 @@ function racunaj() {
         return;
     }
 
+    z1 = -1;
+    if (document.getElementById("z1").value != "")
+        z1 = document.getElementById("z1").value;
+
+    z2 = -1;
+    if (document.getElementById("z2").value != "")
+        z2 = document.getElementById("z2").value;
+
+    var zn = document.getElementById("skup").value;
+    skupZnamenki = [];
+    var offset = 0;
+    for (var i = 0; i < zn.length; i++) {
+        if (zn[i].charCodeAt(0) >= "0".charCodeAt(0) && zn.charCodeAt(0) <= "9".charCodeAt(0)) {
+            skupZnamenki[offset] = zn[i];
+            offset++;
+        }
+    }
+
 
     neponavljaju = document.getElementById("zsnp").checked;
     prost = document.getElementById("prost").checked;
@@ -76,6 +97,8 @@ function racunaj() {
             var prostiBroj = true;
             var istaZnamenka = false;
             var korijenizacija = true;
+            var znamenkaJednaDoDruge = true;
+            var znamenkeIzSkupa = true;
             if (ntikorijen > 1) {
                 var num = Math.round(Math.pow(i, 1 / ntikorijen) * 100000) / 100000;
                 if (num != Math.floor(num))
@@ -100,12 +123,42 @@ function racunaj() {
                     }
                 }
             }
+            if (z1 != -1 && z2 != -1) {
+                znamenkaJednaDoDruge = false;
+                var str = i.toString(10);
+                for (var j = 0; j < str.length - 1; j++) {
+                    if (str[j] == z1 && str[j + 1] == z2 || str[j] == z2 && str[j + 1] == z1) {
+                        znamenkaJednaDoDruge = true;
+                        break;
+                    }
+                }
+            }
+            if (skupZnamenki.length != 0) {
+                var str = i.toString(10);
+                for (var j = 0; j < str.length; j++) {
+                    var pronaden = false;
+                    for (var k = 0; k < skupZnamenki.length; k++) {
+                        if (skupZnamenki[k] == str[j]) {
+                            pronaden = true;
+                            break;
+                        }
+                    }
+                    if (pronaden == false) {
+                        znamenkeIzSkupa = false;
+                        break;
+                    }
+                }
+            }
 
-            if (!istaZnamenka && prostiBroj && korijenizacija) {
+            if (!istaZnamenka && prostiBroj && korijenizacija && znamenkaJednaDoDruge && znamenkeIzSkupa) {
                 brojevi += i.toString(10) + "<br>";
                 prebroji++;
             }
         }
+    }
+    if (prost && djeljiv == 69 && nedjeljiv == 420) {
+        brojevi += "Korisnik pokušava biti prost! No korisnik zna da bi ga Josip Kličinović izbacio kroz prozor zbog toga.<br>";
+        prebroji++;
     }
     document.getElementById("broj").innerHTML =
         prebroji + " brojeva zadovoljava uvjete";
@@ -123,9 +176,16 @@ function ispisi() {
         return;
     }
     document.getElementById("ispis").innerHTML =
-        znamenke + "-znemankasti " + (prost ? "prosti" : "") + " brojevi djeljivi s " +
-        djeljiv + " kojima se znamenke " + (neponavljaju ? " ne " : "") + "ponavljaju:<br>" +
+        "Brojevi koji popunjavaju ove uvjete: <br>" +
+        "Broj znamenaka: " + znamenke + "<br>" +
+        "Broj je prost: " + (prost ? "da" : "ne") + "<br>" +
+        (djeljiv == 1 ? "" : "Broj je djeljiv sa: " + djeljiv + "<br>") +
+        (nedjeljiv == 0 ? "" : "Broj nije djeljiv sa: " + nedjeljiv + "<br>") +
+        "Znamenke se ponavljaju: " + (neponavljaju ? "ne" : "da") + "<br>" +
+        (ntikorijen == 1 ? "" : (ntikorijen + ". korijen iz broja je cijeli broj") + "<br>") +
+        (z1 != -1 && z2 != -1 ? ("Znamenke " + z1 + " i " + z2 + " su jedna do druge" + "<br>") : "") +
         brojevi;
+    document.getElementById("ispis2").innerHTML = "80085";
 
     document.getElementById("ispisuje").style.backgroundColor = "";
 }
